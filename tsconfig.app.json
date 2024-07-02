@@ -16,12 +16,17 @@
     "moduleDetection": "force",
     "noEmit": true,
     "jsx": "preserve",
+    "allowSyntheticDefaultImports": true,
 
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    "sourceMap": true,
+    "inlineSourceMap": true,
+    "types": ["@types/node"],
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"]
 }
