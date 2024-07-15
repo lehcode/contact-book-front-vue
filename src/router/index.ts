@@ -1,7 +1,6 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '../views/HomeView.vue';
-import CreateContact from '../views/CreateContact.vue';
-import EditContact from '../views/EditContact.vue';
+import type { RouteRecordRaw } from "vue-router";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -12,12 +11,12 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/create',
     name: 'create',
-    component: CreateContact
+    component: () => import('../views/CreateContact.vue')
   },
   {
     path: '/edit/:id',
     name: 'edit',
-    component: EditContact
+    component: () => import('../views/EditContact.vue')
   }
 ];
 
